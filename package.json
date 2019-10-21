@@ -1,0 +1,87 @@
+{
+  "name": "react-ui-kit-dontuse",
+  "version": "0.0.23",
+  "description": "UI Kit",
+  "main": "dist/index",
+  "module": "dist/index",
+  "typings": "dist/index",
+  "jest": {
+    "setupFilesAfterEnv": [
+      "<rootDir>/setupTests.js"
+    ],
+    "coverageReporters": [
+      "json-summary",
+      "text",
+      "lcov"
+    ]
+  },
+  "scripts": {
+    "test": "jest --coverage",
+    "test:badges": "npm run test && jest-coverage-badges input './coverage/coverage-summary.json' output './badges'",
+    "test-update": "jest --updateSnapshot",
+    "lint:css": "stylelint './src/**/*.js'",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook -c .storybook -o .out",
+    "generate": "plop --plopfile ./.plop/plop.config.js",
+    "build": "webpack --mode production",
+    "prepare": "npm run build",
+    "storybook-docs": "build-storybook --docs",
+    "todo": "leasot './src/**/*.js'",
+    "todo-ci": "leasot -x --reporter markdown './src/**/*.js' > TODO.md"
+  },
+  "license": "ISC",
+  "peerDependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "recharts": "^1.7.1",
+    "styled-components": "^4.3.2",
+    "styled-normalize": "^8.0.6"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/preset-env": "^7.6.0",
+    "@babel/preset-react": "^7.0.0",
+    "@storybook/addon-actions": "^5.2.1",
+    "@storybook/addon-docs": "^5.2.1",
+    "@storybook/addon-info": "^5.2.1",
+    "@storybook/addon-knobs": "^5.2.1",
+    "@storybook/addon-links": "^5.2.1",
+    "@storybook/addon-viewport": "^5.2.1",
+    "@storybook/addons": "^5.2.1",
+    "@storybook/react": "^5.2.1",
+    "babel-eslint": "^10.0.3",
+    "babel-jest": "^24.9.0",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-styled-components": "^1.10.6",
+    "eslint": "^6.5.1",
+    "eslint-plugin-react": "^7.15.0",
+    "eslint-plugin-react-hooks": "^2.1.1",
+    "jest": "^24.9.0",
+    "jest-coverage-badges": "^1.1.2",
+    "jest-styled-components": "^6.3.3",
+    "leasot": "^8.2.0",
+    "plop": "^2.4.0",
+    "polished": "^3.4.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "react-test-renderer": "^16.9.0",
+    "recharts": "^1.7.1",
+    "storybook-styled-components": "github:merishas/storybook-styled-components",
+    "styled-components": "^4.4.0",
+    "styled-normalize": "^8.0.6",
+    "stylelint": "^10.1.0",
+    "stylelint-config-recommended": "^2.2.0",
+    "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-processor-styled-components": "^1.8.0",
+    "webpack": "^4.40.2",
+    "webpack-cli": "^3.3.9"
+  },
+  "files": [
+    "dist"
+  ],
+  "author": ""
+}
